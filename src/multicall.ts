@@ -545,6 +545,7 @@ export class Multicall {
       return this._options.multicallCustomContractAddress;
     }
 
+    // https://www.multicall3.com/deployments
     switch (network) {
       case Networks.mainnet:
       case Networks.ropsten:
@@ -590,9 +591,13 @@ export class Multicall {
       case Networks.thundercoreTestnet:
       case Networks.oasis:
       case Networks.celo:
+      case Networks.alfajores:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';     
       case Networks.godwoken:
       case Networks.godwokentestnet:
       case Networks.klatyn:
+      case Networks.boabab:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';        
       case Networks.milkomeda:
       case Networks.kcc:
       case Networks.lineaTestnet:
@@ -615,6 +620,69 @@ export class Multicall {
         return '0x2117f703867a2B7E6813c7e5Edd96bf9a8d8eC30';
       case Networks.shibarium:
         return '0xd1727fC8F78aBA7DD6294f6033D74c72Ccd3D3B0';
+      case Networks.holesky:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.flare:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.sapphire:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.velas:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.telos:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';                              
+      case Networks.step:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.canto:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.canotTestnet:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.iotex:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.bitgert:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.kava:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.shardeum:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.neonMainnet:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.neonEVNDevnet:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.hasbit:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.syscoin:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';        
+      case Networks.pulse:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';                              
+      case Networks.pulseTestnet:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.darwinia:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.darwiniaCrab:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.scrollSepolia:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.xodex:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.eosEVM:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.eosEVMTestnet:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.crossbell:
+       return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.neonEVNDevnet:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.dogechain:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.meter:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';        
+      case Networks.meterTestnet:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.ronin:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';    
+      case Networks.roninTestnet:
+        return '0xcA11bde05977b3631167028862bE2a173976CA11';        
+
       default:
         throw new Error(
           `Network - ${network} doesn't have a multicall contract address defined. Please check your network or deploy your own contract on it.`
